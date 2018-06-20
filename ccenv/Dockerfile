@@ -9,6 +9,6 @@ MAINTAINER Dmitry Zhvakin <dm@hostdm.ru>
 # add shim from build
 COPY --from=baseimage /opt/gopath/src/github.com/hyperledger/fabric/build/goshim.tar.bz2 ${GOPATH}/src/
 # add build dependencies
-RUN apk add --no-cache gcc musl-dev
+RUN apk add --no-cache gcc musl-dev libtool
 # from official fabric-ccenv image
 RUN mkdir -p /chaincode/input /chaincode/output
