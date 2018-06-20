@@ -10,6 +10,6 @@ MAINTAINER Dmitry Zhvakin <dm@hostdm.ru>
 COPY --from=baseimage /opt/gopath/src/github.com/hyperledger/fabric/build/goshim.tar.bz2 ${GOPATH}/src/
 # add build dependencies
 RUN apt update && \
-    apt install libtool
+    apt install -y libtool
 # from official fabric-ccenv image
 RUN mkdir -p /chaincode/input /chaincode/output
